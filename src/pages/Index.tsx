@@ -7,9 +7,9 @@ import GraphicElement from "@/components/GraphicElement";
 
 const Index = () => {
   return (
-    <Layout>
+    <Layout fullWidth>
       {/* Hero Section */}
-      <section className="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden">
+      <section className="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden bg-gradient-to-b from-white via-pastel-blue/5 to-white">
         {/* Decorative graphic elements */}
         <div className="absolute top-20 left-10 opacity-50 hidden md:block">
           <GraphicElement type="dots" color="pink" size="lg" />
@@ -24,10 +24,14 @@ const Index = () => {
           <GraphicElement type="square" color="green" size="md" />
         </div>
         
+        {/* Subtle background patterns */}
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_30%,rgba(211,228,253,0.15)_0%,rgba(255,255,255,0)_50%)]"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_80%_70%,rgba(255,222,226,0.15)_0%,rgba(255,255,255,0)_50%)]"></div>
+        
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-newsreader text-4xl md:text-6xl font-semibold mb-6 fade-in">
-              We create <span className="text-gradient">beautiful</span> digital experiences
+              We create <span className="bg-gradient-to-r from-primary via-pastel-pink to-pastel-blue bg-clip-text text-transparent">beautiful</span> digital experiences
             </h1>
             <p className="text-gray-600 text-lg md:text-xl mb-8 slide-up" style={{ animationDelay: "0.2s" }}>
               Modern, sleek, and visually appealing websites with a touch of pastel elegance.
