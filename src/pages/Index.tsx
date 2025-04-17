@@ -10,23 +10,28 @@ const Index = () => {
     <Layout fullWidth>
       {/* Hero Section */}
       <section className="pt-28 pb-16 md:pt-36 md:pb-24 relative overflow-hidden bg-gradient-to-b from-white via-pastel-blue/5 to-white">
-        {/* Advanced background layers */}
-        <div className="absolute inset-0 pointer-events-none">
-          <div className="absolute top-0 left-0 right-0 h-full bg-[radial-gradient(ellipse_at_top_left,rgba(211,228,253,0.1)_0%,transparent_50%)]"></div>
-          <div className="absolute bottom-0 right-0 left-0 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,222,226,0.1)_0%,transparent_50%)]"></div>
+        {/* Animated background layers */}
+        <div className="absolute inset-0 pointer-events-none overflow-hidden">
+          <div className="absolute top-0 left-0 right-0 h-full bg-[radial-gradient(ellipse_at_top_left,rgba(211,228,253,0.1)_0%,transparent_50%)] animate-[pulse_15s_ease-in-out_infinite]"></div>
+          <div className="absolute bottom-0 right-0 left-0 h-full bg-[radial-gradient(ellipse_at_bottom_right,rgba(255,222,226,0.1)_0%,transparent_50%)] animate-[pulse_18s_ease-in-out_infinite_1s]"></div>
+          
+          {/* Floating blob animations */}
+          <div className="absolute top-[15%] left-[10%] w-[25vw] h-[25vw] max-w-[400px] max-h-[400px] rounded-full bg-pastel-purple/[0.03] blur-3xl animate-[floating_20s_ease-in-out_infinite]"></div>
+          <div className="absolute bottom-[20%] right-[15%] w-[20vw] h-[20vw] max-w-[300px] max-h-[300px] rounded-full bg-pastel-blue/[0.03] blur-3xl animate-[floating_25s_ease-in-out_infinite_2s]"></div>
+          <div className="absolute top-[40%] right-[10%] w-[15vw] h-[15vw] max-w-[250px] max-h-[250px] rounded-full bg-pastel-pink/[0.03] blur-3xl animate-[floating_18s_ease-in-out_infinite_1s]"></div>
         </div>
 
         {/* Decorative graphic elements */}
-        <div className="absolute top-20 left-10 opacity-40 hidden md:block">
+        <div className="absolute top-20 left-10 opacity-40 hidden md:block animate-[floating_6s_ease-in-out_infinite]">
           <GraphicElement type="dots" color="pink" size="lg" />
         </div>
-        <div className="absolute bottom-20 right-10 opacity-40 hidden md:block">
+        <div className="absolute bottom-20 right-10 opacity-40 hidden md:block animate-[floating_8s_ease-in-out_infinite_0.5s]">
           <GraphicElement type="dots" color="blue" size="lg" />
         </div>
-        <div className="absolute top-40 right-20 opacity-40 hidden md:block">
+        <div className="absolute top-40 right-20 opacity-40 hidden md:block animate-[floating_7s_ease-in-out_infinite_1s]">
           <GraphicElement type="circle" color="yellow" size="md" />
         </div>
-        <div className="absolute bottom-40 left-20 opacity-40 hidden md:block">
+        <div className="absolute bottom-40 left-20 opacity-40 hidden md:block animate-[floating_9s_ease-in-out_infinite_1.5s]">
           <GraphicElement type="square" color="green" size="md" />
         </div>
         

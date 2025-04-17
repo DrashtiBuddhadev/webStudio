@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,200;0,6..72,300;0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Inter:wght@300;400;500;600;700&display=swap');
 
 @tailwind base;
@@ -133,5 +134,29 @@
   to { 
     transform: translateY(0);
     opacity: 1;
+  }
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0) translateX(0);
+  }
+  25% {
+    transform: translateY(-10px) translateX(5px);
+  }
+  50% {
+    transform: translateY(5px) translateX(-5px);
+  }
+  75% {
+    transform: translateY(-5px) translateX(-8px);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.05;
+  }
+  50% {
+    opacity: 0.15;
   }
 }
