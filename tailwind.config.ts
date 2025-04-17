@@ -18,6 +18,10 @@ export default {
 			}
 		},
 		extend: {
+			fontFamily: {
+				'newsreader': ['Newsreader', 'serif'],
+				'sans': ['Inter', 'sans-serif'],
+			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -51,6 +55,14 @@ export default {
 				card: {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
+				},
+				pastel: {
+					blue: '#D3E4FD',
+					pink: '#FFDEE2',
+					green: '#F2FCE2',
+					yellow: '#FEF7CD',
+					purple: '#E5DEFF',
+					peach: '#FDE1D3',
 				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
