@@ -1,9 +1,9 @@
-
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import Layout from "@/components/Layout";
 import GraphicElement from "@/components/GraphicElement";
+import { ProjectsSection } from "@/components/ProjectsSection";
 
 const Index = () => {
   return (
@@ -19,6 +19,14 @@ const Index = () => {
           <div className="absolute top-[15%] left-[10%] w-[25vw] h-[25vw] max-w-[400px] max-h-[400px] rounded-full bg-pastel-purple/[0.03] blur-3xl animate-[floating_20s_ease-in-out_infinite]"></div>
           <div className="absolute bottom-[20%] right-[15%] w-[20vw] h-[20vw] max-w-[300px] max-h-[300px] rounded-full bg-pastel-blue/[0.03] blur-3xl animate-[floating_25s_ease-in-out_infinite_2s]"></div>
           <div className="absolute top-[40%] right-[10%] w-[15vw] h-[15vw] max-w-[250px] max-h-[250px] rounded-full bg-pastel-pink/[0.03] blur-3xl animate-[floating_18s_ease-in-out_infinite_1s]"></div>
+          
+          {/* Additional geometric backgrounds */}
+          <div className="absolute top-[30%] left-[20%] w-32 h-32 bg-pastel-yellow/[0.02] rounded-full mix-blend-multiply filter blur-xl animate-[floating_22s_ease-in-out_infinite_0.5s]"></div>
+          <div className="absolute bottom-[10%] left-[30%] w-40 h-40 bg-pastel-green/[0.02] rounded-full mix-blend-multiply filter blur-xl animate-[floating_26s_ease-in-out_infinite_1.2s]"></div>
+          <div className="absolute top-[25%] right-[25%] w-36 h-36 bg-pastel-peach/[0.02] rounded-full mix-blend-multiply filter blur-xl animate-[floating_23s_ease-in-out_infinite_0.7s]"></div>
+          
+          {/* Subtle pattern overlay */}
+          <div className="absolute inset-0 opacity-[0.015] bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiMwMDAiIGZpbGwtb3BhY2l0eT0iMC4wMyI+PGNpcmNsZSBjeD0iMS41IiBjeT0iMS41IiByPSIxLjUiLz48Y2lyY2xlIGN4PSIzMS41IiBjeT0iMS41IiByPSIxLjUiLz48Y2lyY2xlIGN4PSIxNi41IiBjeT0iMTYuNSIgcj0iMS41Ii8+PGNpcmNsZSBjeD0iNDYuNSIgY3k9IjE2LjUiIHI9IjEuNSIvPjwvZz48L2c+PC9zdmc+')] animate-[pulse_10s_ease-in-out_infinite_alternate]"></div>
         </div>
 
         {/* Decorative graphic elements */}
@@ -33,6 +41,17 @@ const Index = () => {
         </div>
         <div className="absolute bottom-40 left-20 opacity-40 hidden md:block animate-[floating_9s_ease-in-out_infinite_1.5s]">
           <GraphicElement type="square" color="green" size="md" />
+        </div>
+        
+        {/* Additional decorative elements */}
+        <div className="absolute top-60 left-1/2 opacity-30 hidden md:block animate-[floating_11s_ease-in-out_infinite_0.8s]">
+          <GraphicElement type="triangle" color="peach" size="sm" />
+        </div>
+        <div className="absolute bottom-60 right-1/3 opacity-30 hidden md:block animate-[floating_10s_ease-in-out_infinite_1.3s]">
+          <GraphicElement type="circle" color="purple" size="sm" />
+        </div>
+        <div className="absolute top-[70%] left-1/4 opacity-30 hidden md:block animate-[floating_12s_ease-in-out_infinite_0.2s]">
+          <GraphicElement type="square" color="pink" size="sm" />
         </div>
         
         <div className="container mx-auto px-4 relative z-10">
@@ -108,65 +127,8 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Projects Preview */}
-      <section className="py-16">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center mb-12">
-            <div>
-              <h2 className="font-newsreader text-3xl font-semibold mb-2">Our Latest Projects</h2>
-              <p className="text-gray-600">Some of our recent work that we're proud of</p>
-            </div>
-            <Button asChild variant="outline" className="mt-4 md:mt-0">
-              <Link to="/projects">
-                View All Projects <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Pastel Bloom",
-                category: "E-commerce Website",
-                image: "https://images.unsplash.com/photo-1508739773434-c26b3d09e071",
-                delay: 0
-              },
-              {
-                title: "Minty Fresh",
-                category: "Brand Identity",
-                image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d",
-                delay: 0.1
-              },
-              {
-                title: "Soft Palette",
-                category: "Mobile App",
-                image: "https://images.unsplash.com/photo-1579547945413-497e1b99dac0",
-                delay: 0.2
-              },
-            ].map((project, index) => (
-              <div 
-                key={index} 
-                className="group relative overflow-hidden rounded-lg shadow-sm hover-lift slide-up"
-                style={{ animationDelay: `${project.delay + 0.5}s` }}
-              >
-                <div className="aspect-video overflow-hidden">
-                  <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" 
-                  />
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
-                  <div className="p-6">
-                    <h3 className="font-newsreader text-xl text-white font-medium">{project.title}</h3>
-                    <p className="text-white/80 text-sm">{project.category}</p>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Projects Preview - Replace with new ProjectsSection */}
+      <ProjectsSection />
 
       {/* CTA Section */}
       <section className="py-16 bg-pastel-purple/20">
