@@ -3,9 +3,11 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import makemediasenseImg from "/images/makemediasense.png";
+import moodChatImg from "/images/moodChat.png";
 
 // Project categories
-const categories = ["All", "Web Design","Web Application", "Mobile App", "E-commerce"];
+const categories = ["All", "Web Design","Web Application", "Mobile App", "E-commerce","AI web-app"];
 
 // Project data
 const projects = [
@@ -19,11 +21,13 @@ const projects = [
   },
   {
     id: 2,
-    title: "Make Media Sense",
-    category: "Web Applications",
-    description: "A color palette generator app with sharing capabilities and inspiration boards.",
-    image: "https://images.unsplash.com/photo-1579547945413-497e1b99dac0",
-    tags: ["Web Application"]
+    title: "MoodChat.io",
+    image: moodChatImg, // Use the imported variable
+    category: "AI web-app",
+    description:
+      "A pastel-inspired site with subtle animations and refined grid layout. Prioritizes clarity and user experience.",
+    tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
+
   },
   {
     id: 3,
@@ -36,19 +40,22 @@ const projects = [
   {
     id: 4,
     title: "Pastel Plates",
-    category: "E-commerce & Branding",
+    category: "Mobile App",
     description: "Website and brand identity for a high-end kitchenware company.",
     image: "https://images.unsplash.com/photo-1556910096-6f5e72db6803",
-    tags: ["Web Design", "Branding", "E-commerce"]
-  },
-  {
-    id: 5,
-    title: "Cloud Nine",
-    category: "Mobile App",
-    description: "Weather app with a beautiful, intuitive interface and detailed forecasts.",
-    image: "https://images.unsplash.com/photo-1534088568595-a066f410bcda",
     tags: ["Mobile App"]
   },
+  {
+    id: 2,
+    title: "Make Media Sense",
+    image: makemediasenseImg, // Use the imported variable
+    category: "Web Application",
+    description:
+      "A pastel-inspired site with subtle animations and refined grid layout. Prioritizes clarity and user experience.",
+    tags: ["React", "TypeScript", "TailwindCSS", "Vite"],
+
+  },  
+  
 ];
 
 const Projects = () => {
@@ -73,7 +80,7 @@ const Projects = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-newsreader text-4xl md:text-6xl font-semibold mb-6 fade-in">
-              Our <span className="text-gradient">Projects</span>
+              Our <span>Projects</span>
             </h1>
             <p className="text-gray-600 text-lg mb-8 slide-up" style={{ animationDelay: "0.2s" }}>
               Explore our portfolio of carefully crafted websites, apps, and brand identities.
