@@ -1,6 +1,7 @@
 import { ArrowRight, Code2, Terminal, Database, Laptop, BrainCircuit, Server, Cpu, Globe, Code, ChevronDown, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Info, Users, Heart } from "lucide-react";
+import { Star, Briefcase, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
@@ -276,6 +277,98 @@ const Index = () => {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="services" className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+      <div className="container mx-auto px-6">
+        <ScrollReveal className="text-center mb-16">
+          <h2 className="font:newsreader md:text-4xl font-bold text-gray-800 mb-4">Our Services</h2>
+          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We offer a range of design and development services to elevate your brand
+          </p>
+        </ScrollReveal>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <ScrollReveal className="bg-white p-8 rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div className="w-16 h-16 flex items-center justify-center bg-pink-100 rounded-full mb-6">
+              <Star className="text-pink-500" size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Web Design</h3>
+            <p className="text-gray-600 mb-6">
+              Beautiful, responsive websites that showcase your brand's unique identity and engage your visitors.
+            </p>
+            <ul className="space-y-2 text-gray-600">
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                Custom UI/UX Design
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                Responsive Layouts
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-pink-500 rounded-full mr-2"></span>
+                Interactive Elements
+              </li>
+            </ul>
+          </ScrollReveal>
+
+          {/* <ScrollReveal className="bg-white p-8 rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div className="w-16 h-16 flex items-center justify-center bg-purple-100 rounded-full mb-6">
+              <Briefcase className="text-purple-500" size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Brand Identity</h3>
+            <p className="text-gray-600 mb-6">
+              Comprehensive branding solutions that communicate your values and create a lasting impression.
+            </p>
+            <ul className="space-y-2 text-gray-600">
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Logo Design
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Color Schemes
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-purple-500 rounded-full mr-2"></span>
+                Typography & Guidelines
+              </li>
+            </ul>
+          </ScrollReveal> */}
+
+          <ScrollReveal className="bg-white p-8 rounded-lg shadow-md transition-transform duration-300 hover:-translate-y-2">
+            <div className="w-16 h-16 flex items-center justify-center bg-blue-100 rounded-full mb-6">
+              <Book className="text-blue-500" size={24} />
+            </div>
+            <h3 className="text-xl font-bold mb-3 text-gray-800">Web Development</h3>
+            <p className="text-gray-600 mb-6">
+              Custom web applications with clean code and intuitive functionality for optimal user experience.
+            </p>
+            <ul className="space-y-2 text-gray-600">
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                Frontend Development
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                CMS Integration
+              </li>
+              <li className="flex items-center">
+                <span className="w-2 h-2 bg-blue-500 rounded-full mr-2"></span>
+                E-commerce Solutions
+              </li>
+            </ul>
+          </ScrollReveal>
+        </div>
+
+        <div className="text-center mt-10">
+          <button className="px-8 py-3 bg-transparent border-2 border-pink-500 text-pink-500 hover:bg-pink-50 rounded-lg font-medium transition-all">
+            View All Services
+          </button>
         </div>
       </div>
     </section>
