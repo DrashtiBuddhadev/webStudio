@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -6,7 +5,7 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 // Project categories
-const categories = ["All", "Web Design", "Branding", "Mobile App", "E-commerce"];
+const categories = ["All", "Web Design","Web Application", "Mobile App", "E-commerce"];
 
 // Project data
 const projects = [
@@ -20,22 +19,14 @@ const projects = [
   },
   {
     id: 2,
-    title: "Minty Fresh",
-    category: "Brand Identity",
-    description: "Complete brand identity for a sustainable home products company.",
-    image: "https://images.unsplash.com/photo-1558591710-4b4a1ae0f04d",
-    tags: ["Branding"]
+    title: "Make Media Sense",
+    category: "Web Applications",
+    description: "A color palette generator app with sharing capabilities and inspiration boards.",
+    image: "https://images.unsplash.com/photo-1579547945413-497e1b99dac0",
+    tags: ["Web Application"]
   },
   {
     id: 3,
-    title: "Soft Palette",
-    category: "Mobile App",
-    description: "A color palette generator app with sharing capabilities and inspiration boards.",
-    image: "https://images.unsplash.com/photo-1579547945413-497e1b99dac0",
-    tags: ["Mobile App"]
-  },
-  {
-    id: 4,
     title: "Gentle Waves",
     category: "Website",
     description: "A portfolio website for a photographer specializing in ocean photography.",
@@ -43,7 +34,7 @@ const projects = [
     tags: ["Web Design"]
   },
   {
-    id: 5,
+    id: 4,
     title: "Pastel Plates",
     category: "E-commerce & Branding",
     description: "Website and brand identity for a high-end kitchenware company.",
@@ -51,7 +42,7 @@ const projects = [
     tags: ["Web Design", "Branding", "E-commerce"]
   },
   {
-    id: 6,
+    id: 5,
     title: "Cloud Nine",
     category: "Mobile App",
     description: "Weather app with a beautiful, intuitive interface and detailed forecasts.",
@@ -103,8 +94,8 @@ const Projects = () => {
                 variant={activeCategory === category ? "default" : "outline"}
                 onClick={() => filterProjects(category)}
                 className={`${
-                  activeCategory === category ? "bg-primary text-white" : "bg-white border-gray-200"
-                } rounded-full px-6`}
+                  activeCategory === category ? "bg-blue-100 text-blue-700 border-blue-200" : "bg-white border-gray-200"
+                } rounded-full px-6 hover:bg-blue-50`}
               >
                 {category}
               </Button>

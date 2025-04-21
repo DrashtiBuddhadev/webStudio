@@ -45,7 +45,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="flex items-center">
           <h1 className="text-xl font-bold font-newsreader tracking-wide">
-            <span className="text-gradient">Pastel</span>Studio
+            <span className="">Web</span>Studio
           </h1>
         </Link>
 
@@ -64,9 +64,6 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          <Button size="sm" className="ml-4 bg-pastel-blue text-primary hover:bg-pastel-blue/80">
-            Get in Touch
-          </Button>
         </nav>
 
         {/* Mobile Navigation Toggle */}
@@ -99,9 +96,6 @@ const Navbar = () => {
               {item.name}
             </Link>
           ))}
-          <Button className="mt-2 bg-pastel-blue text-primary hover:bg-pastel-blue/80">
-            Get in Touch
-          </Button>
         </nav>
       </div>
     </header>

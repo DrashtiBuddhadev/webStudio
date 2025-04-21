@@ -1,4 +1,3 @@
-
 import { ExternalLink, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
@@ -15,10 +14,10 @@ interface Project {
 
 const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
+    title: "Digital Marketing platform",
     description: "A modern e-commerce solution with real-time inventory management and streamlined checkout process.",
     image: "https://images.unsplash.com/photo-1523800503107-5bc3ba2a6f81?q=80&w=1000&auto=format&fit=crop",
-    tags: ["React", "Node.js", "MongoDB", "Stripe"],
+    tags: ["React","TypeScript", "Node.js"],
     demoLink: "#",
     githubLink: "#"
   },
@@ -99,20 +98,35 @@ export function ProjectsSection() {
                 
                 <div className="flex gap-4 pt-4">
                   {project.demoLink && (
-                    <Link 
-                      to={project.demoLink}
-                      className="flex items-center text-accent hover:text-accent/80 transition-colors"
+                    <a
+                      href={project.demoLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center transition-colors"
                     >
-                      <ExternalLink className="mr-1 h-4 w-4" /> Live Demo
-                    </Link>
+                      <span className="inline-block p-2 rounded-full mr-1">
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                          <path d="M14 3h7v7" />
+                          <path d="M5 19l16-16" />
+                        </svg>
+                      </span>
+                      Live Demo
+                    </a>
                   )}
                   {project.githubLink && (
-                    <Link 
-                      to={project.githubLink}
-                      className="flex items-center text-accent hover:text-accent/80 transition-colors"
+                    <a
+                      href={project.githubLink}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center transition-colors"
                     >
-                      <Github className="mr-1 h-4 w-4" /> Source Code
-                    </Link>
+                      <span className="inline-block p-2 rounded-full mr-1">
+                        <svg className="h-4 w-4" fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24">
+                          <path d="M12 2C6.477 2 2 6.477 2 12c0 4.418 2.867 8.166 6.839 9.489.5.092.682-.217.682-.483v-1.693c-2.782.604-3.369-1.342-3.369-1.342-.454-1.155-1.11-1.463-1.11-1.463-.908-.621.069-.609.069-.609 1.004.07 1.532 1.032 1.532 1.032.893 1.53 2.341 1.089 2.91.834.091-.647.35-1.089.636-1.34-2.221-.253-4.555-1.111-4.555-4.945 0-1.091.39-1.984 1.03-2.684-.104-.253-.447-1.273.098-2.654 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0 1 12 8.844a9.57 9.57 0 0 1 2.506.338c1.909-1.296 2.748-1.026 2.748-1.026.546 1.381.203 2.401.1 2.654.64.7 1.028 1.593 1.028 2.684 0 3.842-2.337 4.688-4.565 4.936.359.309.679.919.679 1.852v2.747c0 .268.181.578.688.48C19.134 20.163 22 16.418 22 12c0-5.523-4.477-10-10-10Z" />
+                        </svg>
+                      </span>
+                      Source Code
+                    </a>
                   )}
                 </div>
               </div>

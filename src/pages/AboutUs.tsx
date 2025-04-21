@@ -1,4 +1,3 @@
-
 import Layout from "@/components/Layout";
 import GraphicElement from "@/components/GraphicElement";
 
@@ -14,15 +13,18 @@ const AboutUs = () => {
         <div className="absolute bottom-12 right-16 opacity-30 hidden md:block">
           <GraphicElement type="square" color="purple" size="md" />
         </div>
-        
+
         <div className="container mx-auto px-4 relative">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-newsreader text-4xl md:text-6xl font-semibold mb-6 fade-in">
-              About <span className="text-gradient">Us</span>
+              About <span>Us</span>
             </h1>
-            <p className="text-gray-600 text-lg mb-8 slide-up" style={{ animationDelay: "0.2s" }}>
-              We're a passionate team of designers and developers creating modern, 
-              sleek websites with a touch of pastel elegance.
+            <p
+              className="text-gray-600 text-lg mb-8 slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              We're a passionate team of designers and developers creating
+              modern, sleek websites with a touch of pastel elegance.
             </p>
           </div>
         </div>
@@ -33,29 +35,36 @@ const AboutUs = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="order-2 lg:order-1">
-              <h2 className="font-newsreader text-3xl font-semibold mb-4">Our Story</h2>
+              <h2 className="font-newsreader text-3xl font-semibold mb-4">
+                Our Story
+              </h2>
               <p className="text-gray-600 mb-4">
-                Founded in 2020, PastelStudio began with a simple mission: to bring a fresh, 
-                modern approach to web design while maintaining a professional aesthetic.
+                Founded in 2025, WebStudio began with a clear mission: to offer
+                a modern, user-focused approach to web design—one that blends
+                creativity with professionalism. From day one, the goal has been
+                to help businesses of all sizes stand out online with clean,
+                effective, and beautifully built websites.
               </p>
               <p className="text-gray-600 mb-4">
-                Our founder, a graphic designer with over 10 years of experience, noticed that 
-                many websites were either too corporate and rigid or too flashy and impractical. 
-                She envisioned a middle ground – designs that were visually appealing yet 
-                functional and professional.
+               Every line of code and design
+                decision is made with the user in mind, ensuring a seamless
+                experience for both clients and their audiences.
               </p>
               <p className="text-gray-600">
-                Today, we're a team of eight creative professionals, each bringing unique skills 
-                and perspectives to every project we undertake. We've worked with clients ranging 
-                from startups to established businesses across various industries.
+                We are incredibly passionate about what we do and excited about
+                what’s ahead. Whether you're launching a new business,
+                refreshing an old website, or building something entirely
+                unique, WebStudio is here to help you create something truly
+                impactful. This is just the beginning—and we areeager to keep
+                leveling up with every project I take on.
               </p>
             </div>
             <div className="order-1 lg:order-2 relative">
               <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
-                <img 
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" 
-                  alt="Team meeting" 
-                  className="w-full h-full object-cover" 
+                <img
+                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                  alt="Team meeting"
+                  className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 h-24 w-24 bg-pastel-pink rounded-lg"></div>
@@ -69,9 +78,12 @@ const AboutUs = () => {
       <section className="py-16 bg-pastel-green/10">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="font-newsreader text-3xl font-semibold mb-4">Our Values</h2>
+            <h2 className="font-newsreader text-3xl font-semibold mb-4">
+              Our Values
+            </h2>
             <p className="text-gray-600">
-              These core principles guide everything we do and every decision we make.
+              These core principles guide everything we do and every decision we
+              make.
             </p>
           </div>
 
@@ -82,32 +94,38 @@ const AboutUs = () => {
                 description:
                   "We never compromise on quality. Every pixel, every line of code, and every interaction is crafted with care.",
                 color: "bg-pastel-blue",
-                delay: 0
+                delay: 0,
               },
               {
                 title: "Innovation",
                 description:
                   "We stay at the forefront of design and technology trends, constantly learning and evolving our craft.",
                 color: "bg-pastel-pink",
-                delay: 0.1
+                delay: 0.1,
               },
               {
                 title: "Integrity",
                 description:
                   "We believe in transparent communication, honest pricing, and delivering on our promises.",
                 color: "bg-pastel-yellow",
-                delay: 0.2
+                delay: 0.2,
               },
             ].map((value, index) => (
-              <div 
-                key={index} 
+              <div
+                key={index}
                 className="bg-white rounded-lg p-8 shadow-sm hover-lift slide-up text-center"
                 style={{ animationDelay: `${value.delay + 0.5}s` }}
               >
-                <div className={`h-16 w-16 rounded-full ${value.color} mb-4 mx-auto flex items-center justify-center`}>
-                  <span className="text-primary text-xl font-bold">{index + 1}</span>
+                <div
+                  className={`h-16 w-16 rounded-full ${value.color} mb-4 mx-auto flex items-center justify-center`}
+                >
+                  <span className="text-primary text-xl font-bold">
+                    {index + 1}
+                  </span>
                 </div>
-                <h3 className="font-newsreader text-xl font-medium mb-3">{value.title}</h3>
+                <h3 className="font-newsreader text-xl font-medium mb-3">
+                  {value.title}
+                </h3>
                 <p className="text-gray-600">{value.description}</p>
               </div>
             ))}
@@ -116,7 +134,7 @@ const AboutUs = () => {
       </section>
 
       {/* Team Section */}
-      <section className="py-16">
+      {/* <section className="py-16">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
             <h2 className="font-newsreader text-3xl font-semibold mb-4">Meet Our Team</h2>
@@ -172,7 +190,7 @@ const AboutUs = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
     </Layout>
   );
 };

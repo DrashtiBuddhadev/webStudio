@@ -48,7 +48,7 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-newsreader text-4xl md:text-6xl font-semibold mb-6 fade-in">
-              Get in <span className="text-gradient">Touch</span>
+              Get in Touch  
             </h1>
             <p className="text-gray-600 text-lg mb-8 slide-up" style={{ animationDelay: "0.2s" }}>
               We'd love to hear from you. Fill out the form below or use our contact information to reach out.
@@ -170,7 +170,7 @@ const Contact = () => {
             
             {/* Contact Information */}
             <div>
-              <h2 className="font-newsreader text-2xl font-medium mb-6">Contact Information</h2>
+              <h2 className="font-newsreader text-2xl font-medium mb-6 pt-6">Contact Information</h2>
               
               <div className="grid grid-cols-1 gap-6 mb-8">
                 <div className="flex items-start">
@@ -180,8 +180,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Our Location</h3>
                     <p className="text-gray-600">
-                      123 Pastel Avenue, Design District<br />
-                      New York, NY 10001
+                      Green Park Society, Ahmedabad, Gujarat, India
                     </p>
                   </div>
                 </div>
@@ -193,7 +192,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Phone Number</h3>
                     <p className="text-gray-600">
-                      +1 (555) 123-4567<br />
+                      +91 8866207909<br />
                       Mon-Fri, 9am-6pm EST
                     </p>
                   </div>
@@ -206,14 +205,14 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Email Address</h3>
                     <p className="text-gray-600">
-                      hello@pastelstudio.com<br />
-                      support@pastelstudio.com
+                      contact@webstudio.com<br />
+                      support@webstudio.com
                     </p>
                   </div>
                 </div>
               </div>
               
-              <div className="bg-pastel-purple/10 rounded-lg p-6">
+              {/* <div className="bg-pastel-purple/10 rounded-lg p-6">
                 <h3 className="font-newsreader text-xl font-medium mb-3">Business Hours</h3>
                 <ul className="space-y-2">
                   <li className="flex justify-between">
@@ -229,7 +228,7 @@ const Contact = () => {
                     <span className="font-medium">Closed</span>
                   </li>
                 </ul>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -247,6 +246,13 @@ const Contact = () => {
           
           <div className="aspect-video rounded-lg overflow-hidden shadow-sm">
             {/* Placeholder for map - in a real application, you'd use Google Maps or similar */}
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.992533333333!2d72.5704926148723!3d23.02578328493482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bdc9f%3A0x9a1f0d61e8440afe!2sGreen%20Park%20Society!5e0!3m2!1sen!2sin!4v1718614860083!5m2!1sen!2sin"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+            ></iframe>     
             <div className="w-full h-full bg-gray-200 flex items-center justify-center">
               <p className="text-gray-500">Interactive Map Would Be Displayed Here</p>
             </div>
