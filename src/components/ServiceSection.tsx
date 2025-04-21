@@ -22,12 +22,12 @@ const Services = () => (
     id="services"
     className="relative w-full py-28 bg-gradient-to-br from-[#f8faff] to-[#ededf8]"
   >
-    <div className="mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16 items-center">
+    <div className="mx-auto max-w-5xl px-4 grid grid-cols-1 md:grid-colss-2 gap-0 md:gap-16 items-center">
       {/* Left: Title/Desc */}
       <div>
         <ScrollReveal>
-          <h2 className="text-4xl md:text-5xl font-newsreader font-semibold tracking-tight text-gray-900 mb-6 leading-tight">
-            We design & build quietly brilliant web experiences.
+          <h2 className="text-4xl md:text-5xl font-sans font-semibold tracking-tight text-gray-900 mb-6 leading-tight">
+            We design & build quietly <span className="font:newsreader text-4xl md:text-5xl font-semibold tracking-tight text-gray-900 mb-6 leading-tight">brilliant web experiences.</span>
           </h2>
           <p className="text-lg text-gray-500 mb-3 max-w-prose">
             Focused digital solutions for teams who care about clarity and aesthetic restraint.
