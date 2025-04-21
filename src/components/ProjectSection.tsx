@@ -1,29 +1,30 @@
 import React from "react";
 import { Link, Code } from "lucide-react";
+// Import images correctly - use the relative path without using curly braces
+import makemediasenseImg from "../public/images/makemediasense.png";
+import moodChatImg from "../public/images/moodChat.png";
 
 // Scroll reveal effect (slide + fade in)
 import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const projects = [
   {
-    title: "Pastel Web Design",
-    image:
-      "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=700&q=80",
+    title: "MoodChat.io",
+    image: moodChatImg, // Use the imported variable
     description:
       "A pastel-inspired site with subtle animations and refined grid layout. Prioritizes clarity and user experience.",
     tech: ["React", "TypeScript", "TailwindCSS", "Vite"],
-    live: "https://pastel-web-design.vercel.app/",
-    source: "https://github.com/example/pastel-web-design",
+    live: "https://astralis-notes.vercel.app/",
+    source: "https://github.com/abbasmithaiwala/astralis",
   },
   {
-    title: "Circuit Visualizer",
-    image:
-      "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=700&q=80",
+    title: "Make Media Sense",
+    image: makemediasenseImg, // Use the imported variable
     description:
       "Interactive data visualizations and clean dark UI for engineering projects and dashboards.",
     tech: ["React", "Recharts", "Sass"],
-    live: "#",
-    source: "#",
+    live: "https://media-make-sense-vamc.vercel.app/",
+    source: "https://github.com/DrashtiBuddhadev/MediaMakeSense",
   },
   {
     title: "Code Showcase",
