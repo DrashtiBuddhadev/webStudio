@@ -10,6 +10,7 @@ import CodeAnimation from "@/components/CodeAnimation";
 import FeatureFlipCard from "@/components/FeatureFlipCard";
 import { Wand2, Smartphone, Smile } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
+import Services from "@/components/ServiceSection";
 
 const pastelGradients = [
   "from-pastel-blue via-pastel-purple to-pastel-pink",
@@ -372,6 +373,7 @@ const Index = () => {
         </div>
       </div>
     </section>
+      <Services/>
 
       <ProjectsSection />
 
