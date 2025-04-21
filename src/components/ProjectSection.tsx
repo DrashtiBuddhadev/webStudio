@@ -41,7 +41,7 @@ const ProjectSection: React.FC = () => {
   return (
     <section className="w-full bg-[#FAF8FF] py-20 md:py-28 border-t border-gray-100">
       <div className="max-w-5xl mx-auto px-4 flex flex-col gap-14">
-        <h2 className="font-playfair text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
+      <h2 className="font-newsreader text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
           Projects
         </h2>
         <div className="flex flex-col gap-16">
@@ -85,7 +85,7 @@ const ProjectSection: React.FC = () => {
                   {/* Removed white shadow overlay on hover */}
                 </div>
                 <div className="basis-[50%] w-full flex flex-col justify-center gap-4 px-3 py-6 md:py-0">
-                  <h3 className="font-playfair text-2xl font-bold text-gray-900 mb-1">
+                  <h3 className="font-newsreader text-2xl font-bold text-gray-900 mb-1">
                     {p.title}
                   </h3>
                   <p className="font-inter text-gray-700 text-[1.05rem] leading-relaxed mb-2">
