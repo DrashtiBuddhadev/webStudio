@@ -62,7 +62,7 @@ const AboutUs = () => {
             <div className="order-1 lg:order-2 relative">
               <div className="relative h-80 md:h-96 rounded-lg overflow-hidden shadow-lg">
                 <img
-                  src="https://images.unsplash.com/photo-1522071820081-009f0129c71c"
+                  src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80&w=600&h=400"
                   alt="Team meeting"
                   className="w-full h-full object-cover"
                 />
