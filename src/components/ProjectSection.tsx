@@ -41,7 +41,7 @@ const projects = [
 const ProjectSection: React.FC = () => {
   return (
     <section className="w-full bg-[#FAF8FF] py-20 md:py-28 border-t border-gray-100">
-      <div className="max-w-5xl mx-auto px-4 flex flex-col gap-14">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col gap-14">
       <h2 className="font-newsreader text-3xl md:text-4xl font-bold text-gray-900 text-center mb-8">
           Projects
         </h2>
@@ -56,7 +56,7 @@ const ProjectSection: React.FC = () => {
                 ref={ref}
                 key={i}
                 className={`flex flex-col md:flex-row items-center gap-8 md:gap-12 rounded-2xl shadow-sm border border-gray-100 bg-white
-                  overflow-hidden transition-all
+                  overflow-hidden transition-all w-full
                   ${
                     i % 2 === 0
                       ? "md:flex-row"
@@ -74,7 +74,7 @@ const ProjectSection: React.FC = () => {
                 }}
               >
                 <div
-                  className="basis-[50%] w-full h-[230px] md:h-[320px] flex-shrink-0 group relative"
+                  className="basis-[60%] w-full h-[230px] md:h-[350px] flex-shrink-0 group relative"
                 >
                   <img
                     src={p.image}
@@ -82,10 +82,8 @@ const ProjectSection: React.FC = () => {
                     loading="lazy"
                     className="object-cover w-full h-full rounded-2xl md:rounded-lg shadow-lg transition-transform duration-500 group-hover:scale-105"
                   />
-                  {/* Removed overlay gradient */}
-                  {/* Removed white shadow overlay on hover */}
                 </div>
-                <div className="basis-[50%] w-full flex flex-col justify-center gap-4 px-3 py-6 md:py-0">
+                <div className="basis-[40%] w-full flex flex-col justify-center gap-4 px-6 py-6 md:py-0">
                   <h3 className="font-newsreader text-2xl font-bold text-gray-900 mb-1">
                     {p.title}
                   </h3>
