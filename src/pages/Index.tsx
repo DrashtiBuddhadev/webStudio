@@ -222,8 +222,8 @@ const Index = () => {
       <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <ScrollReveal className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Us</h2>
-          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
+          <h2 className="font:newsreader  text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Us</h2>
+          {/* <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div> */}
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We're a passionate team of designers and developers creating beautiful digital experiences.
           </p>
@@ -234,7 +234,7 @@ const Index = () => {
             <div className="relative">
               <div className="absolute -z-10 w-full h-full bg-pink-100 rounded-lg -top-4 -right-4"></div>
               <img 
-                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=600&h=450" 
+                src="https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80&w=600&h=400" 
                 alt="Our Team" 
                 className="rounded-lg shadow-lg z-10 relative"
               />
