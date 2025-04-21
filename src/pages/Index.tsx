@@ -5,7 +5,7 @@ import { Star, Briefcase, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
-import { ProjectsSection } from "@/components/ProjectsSection";
+import { ProjectSection } from "@/components/ProjectSection";
 import CodeAnimation from "@/components/CodeAnimation";
 import FeatureFlipCard from "@/components/FeatureFlipCard";
 import { Wand2, Smartphone, Smile } from "lucide-react";
@@ -283,7 +283,7 @@ const Index = () => {
     </section>
       <Services/>
 
-      <ProjectsSection />
+      <ProjectSection />
 
       <section className="py-16 bg-pastel-purple/20">
         <div className="container mx-auto px-4">
