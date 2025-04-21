@@ -5,7 +5,7 @@ import { Star, Briefcase, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
-import { ProjectSection } from "@/components/ProjectSection";
+import ProjectSection  from "@/components/ProjectSection";
 import CodeAnimation from "@/components/CodeAnimation";
 import FeatureFlipCard from "@/components/FeatureFlipCard";
 import { Wand2, Smartphone, Smile } from "lucide-react";
