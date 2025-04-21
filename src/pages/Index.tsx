@@ -1,5 +1,6 @@
-import { ArrowRight, Code2, Terminal, Database, Laptop, BrainCircuit, Server, Cpu, Globe, Code, ChevronDown } from "lucide-react";
+import { ArrowRight, Code2, Terminal, Database, Laptop, BrainCircuit, Server, Cpu, Globe, Code, ChevronDown, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Info, Users, Heart } from "lucide-react";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import Layout from "@/components/Layout";
@@ -7,6 +8,7 @@ import { ProjectsSection } from "@/components/ProjectsSection";
 import CodeAnimation from "@/components/CodeAnimation";
 import FeatureFlipCard from "@/components/FeatureFlipCard";
 import { Wand2, Smartphone, Smile } from "lucide-react";
+import ScrollReveal from "./ScrollReveal";
 
 const pastelGradients = [
   "from-pastel-blue via-pastel-purple to-pastel-pink",
@@ -216,6 +218,66 @@ const Index = () => {
           </div>
         </div>
       </section>
+
+      <section id="about" className="py-20 bg-white">
+      <div className="container mx-auto px-6">
+        <ScrollReveal className="text-center mb-16">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Us</h2>
+          <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            We're a passionate team of designers and developers creating beautiful digital experiences.
+          </p>
+        </ScrollReveal>
+
+        <div className="flex flex-col md:flex-row items-center md:space-x-8">
+          <div className="w-full md:w-1/2 mb-10 md:mb-0">
+            <div className="relative">
+              <div className="absolute -z-10 w-full h-full bg-pink-100 rounded-lg -top-4 -right-4"></div>
+              <img 
+                src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=600&h=450" 
+                alt="Our Team" 
+                className="rounded-lg shadow-lg z-10 relative"
+              />
+            </div>
+          </div>
+          
+          <div className="w-full md:w-1/2">
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              Founded in 2020, Pastel Vision Design Studio specializes in creating beautiful, 
+              functional websites and digital products that help businesses succeed. 
+              We believe in the power of soft colors, elegant typography, and clean design 
+              to communicate your brand's message.
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className="bg-purple-50 p-6 rounded-lg">
+                <div className="w-12 h-12 flex items-center justify-center bg-purple-100 rounded-full mb-4">
+                  <Users className="text-purple-600" size={20} />
+                </div>
+                <h3 className="font-medium text-lg mb-2">Expert Team</h3>
+                <p className="text-gray-600 text-sm">Talented professionals with years of industry experience</p>
+              </div>
+              
+              <div className="bg-pink-50 p-6 rounded-lg">
+                <div className="w-12 h-12 flex items-center justify-center bg-pink-100 rounded-full mb-4">
+                  <Info className="text-pink-600" size={20} />
+                </div>
+                <h3 className="font-medium text-lg mb-2">Our Mission</h3>
+                <p className="text-gray-600 text-sm">Creating designs that delight and inspire your audience</p>
+              </div>
+              
+              <div className="bg-blue-50 p-6 rounded-lg">
+                <div className="w-12 h-12 flex items-center justify-center bg-blue-100 rounded-full mb-4">
+                  <Heart className="text-blue-600" size={20} />
+                </div>
+                <h3 className="font-medium text-lg mb-2">Passion</h3>
+                <p className="text-gray-600 text-sm">We love what we do and it shows in our work</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
       <ProjectsSection />
 
