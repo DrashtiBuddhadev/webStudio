@@ -243,10 +243,11 @@ const Index = () => {
           
           <div className="w-full md:w-1/2">
             <p className="text-gray-600 mb-8 leading-relaxed">
-              Founded in 2020, Pastel Vision Design Studio specializes in creating beautiful, 
-              functional websites and digital products that help businesses succeed. 
-              We believe in the power of soft colors, elegant typography, and clean design 
-              to communicate your brand's message.
+                Founded in 2025, WebStudio began with a clear mission: to offer
+                a modern, user-focused approach to web design—one that blends
+                creativity with professionalism. From day one, the goal has been
+                to help businesses of all sizes stand out online with clean,
+                effective, and beautifully built websites.
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
