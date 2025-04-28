@@ -180,7 +180,7 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Our Location</h3>
                     <p className="text-gray-600">
-                      Green Park Society, Ahmedabad, Gujarat, India
+                      Ahmedabad, Gujarat, India
                     </p>
                   </div>
                 </div>

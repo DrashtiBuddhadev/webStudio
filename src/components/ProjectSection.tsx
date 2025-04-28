@@ -10,6 +10,15 @@ import { useScrollReveal } from "../hooks/useScrollReveal";
 
 const projects = [
   {
+    title: "Make Media Sense",
+    image: image, // Use the imported variable
+    description:
+      "Media Make Sense is a portfolio website for a digital marketing client, showcasing their expertise in creating impactful marketing solutions. The site highlights the client's ability to craft strategies that resonate with audiences and drive business growth. Its clean design and intuitive layout make it an effective platform for showcasing digital marketing services.",
+    tech: ["React", "Recharts", "Sass"],
+    live: "https://makemediasense.vercel.app/",
+    // source: "#",
+  },
+  {
     title: "MoodChat.io-Intelligent Notes and Chat Application",
     image: moodChatImg, // Use the imported variable
     description:
@@ -26,15 +35,6 @@ const projects = [
     ],
     live: "https://pastel-web-design.vercel.app/",
     // source: "https://github.com/example/pastel-web-design",
-  },
-  {
-    title: "Make Media Sense",
-    image: image, // Use the imported variable
-    description:
-      "Media Make Sense is a portfolio website for a digital marketing client, showcasing their expertise in creating impactful marketing solutions. The site highlights the client's ability to craft strategies that resonate with audiences and drive business growth. Its clean design and intuitive layout make it an effective platform for showcasing digital marketing services.",
-    tech: ["React", "Recharts", "Sass"],
-    live: "https://makemediasense.vercel.app/",
-    // source: "#",
   },
   {
     title: "DishSnap",

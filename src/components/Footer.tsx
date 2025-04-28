@@ -147,7 +147,7 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-primary mt-0.5 mr-3" />
                 <span className="text-gray-600">
-                  Green Park Society, Ahmedabad, Gujarat, India
+                  Ahmedabad, Gujarat, India
                 </span>
               </li>
               <li className="flex items-center">
