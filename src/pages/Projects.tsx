@@ -3,7 +3,7 @@ import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import makemediasenseImg from "/images/makemediasense.png";
+import makemediasenseImg from "/images/image.png";
 import moodChatImg from "/images/moodChat.png";
 
 // Project categories
