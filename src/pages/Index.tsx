@@ -1,6 +1,6 @@
 import { ArrowRight, Code2, Terminal, Database, Laptop, BrainCircuit, Server, Cpu, Globe, Code, ChevronDown, Info } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { Info, Users, Heart } from "lucide-react";
+import { Users, Heart } from "lucide-react";
 import { Star, Briefcase, Book } from "lucide-react";
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
@@ -11,7 +11,7 @@ import FeatureFlipCard from "@/components/FeatureFlipCard";
 import { Wand2, Smartphone, Smile } from "lucide-react";
 import ScrollReveal from "./ScrollReveal";
 import Services from "@/components/ServiceSection";
-
+import HeroCarousel from "@/components/HeroCarousel";
 const pastelGradients = [
   "from-pastel-blue via-pastel-purple to-pastel-pink",
   "from-pastel-pink via-pastel-yellow to-pastel-peach",
@@ -23,6 +23,20 @@ const featureIcons = [
   <Smartphone className="h-8 w-8 text-primary" />,
   <Smile className="h-8 w-8 text-primary" />
 ];
+
+const fadeIn = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i = 0) => ({
+    opacity: 1,
+    y: 0,
+    transition: { 
+      duration: 0.8,
+      ease: [0.22, 1, 0.36, 1],
+      delay: i * 0.1
+    }
+  })
+};
+
 
 const features = [
   {
@@ -96,7 +110,8 @@ const Index = () => {
 
   return (
     <Layout fullWidth>
-      <section className="relative min-h-screen flex flex-col justify-center items-center hero-pastel-bg overflow-hidden">
+      <HeroCarousel/>
+      {/* <section className="relative min-h-screen flex flex-col justify-center items-center hero-pastel-bg overflow-hidden">
         {showInitialAnim && (
           <div 
             className="absolute inset-0 z-50 bg-gradient-to-br from-pastel-blue via-pastel-purple/70 to-pastel-pink flex items-center justify-center"
@@ -192,7 +207,7 @@ const Index = () => {
         )}
         
         <div className="absolute inset-0 z-10 pastel-particles"></div>
-      </section>
+      </section> */}
 
       <section className="py-20 bg-gradient-to-b from-pastel-purple/10 to-pastel-blue/10 relative">
         <div className="absolute -top-16 left-1/3 w-[320px] h-[150px] bg-pastel-pink rounded-full opacity-40 blur-2xl z-0"></div>
@@ -224,7 +239,7 @@ const Index = () => {
       <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <ScrollReveal className="text-center mb-16">
-          <h2 className="font:newsreader  text-3xl md:text-4xl font-bold text-gray-800 mb-4">About Us</h2>
+          <h2 className="font-newsreader font-semibold  text-3xl md:text-4xl text-gray-800 mb-4">About Us</h2>
           {/* <div className="w-24 h-1 bg-pink-500 mx-auto mb-8"></div> */}
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             We're a passionate team of designers and developers creating beautiful digital experiences.
