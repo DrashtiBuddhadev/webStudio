@@ -142,7 +142,7 @@ export default function HeroCarousel() {
                     transition={{ delay: 0.4 }}
                     className="flex gap-4 pt-4"
                   >
-                    <Link to={slides[current].ctaLink}>
+                    <Link to="/about-us">
                       <Button 
                         variant="outline"
                         className="border-white text-gray-800 hover:bg-white/10 hover:text-white px-8 py-6 text-lg btn-animated"

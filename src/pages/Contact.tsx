@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Layout from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -12,21 +11,23 @@ const Contact = () => {
     email: "",
     phone: "",
     subject: "",
-    message: ""
+    message: "",
   });
-  
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     const { name, value } = e.target;
-    setFormState(prev => ({ ...prev, [name]: value }));
+    setFormState((prev) => ({ ...prev, [name]: value }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
+
     // Simulate form submission
     setTimeout(() => {
       setIsSubmitting(false);
@@ -36,7 +37,7 @@ const Contact = () => {
         email: "",
         phone: "",
         subject: "",
-        message: ""
+        message: "",
       });
     }, 1500);
   };
@@ -48,10 +49,14 @@ const Contact = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="font-newsreader text-4xl md:text-6xl font-semibold mb-6 fade-in">
-              Get in Touch  
+              Get in Touch
             </h1>
-            <p className="text-gray-600 text-lg mb-8 slide-up" style={{ animationDelay: "0.2s" }}>
-              We'd love to hear from you. Fill out the form below or use our contact information to reach out.
+            <p
+              className="text-gray-600 text-lg mb-8 slide-up"
+              style={{ animationDelay: "0.2s" }}
+            >
+              We'd love to hear from you. Fill out the form below or use our
+              contact information to reach out.
             </p>
           </div>
         </div>
@@ -68,12 +73,15 @@ const Contact = () => {
                   <div className="h-16 w-16 bg-pastel-green/20 rounded-full flex items-center justify-center mb-6">
                     <CheckCircle className="h-8 w-8 text-green-600" />
                   </div>
-                  <h3 className="font-newsreader text-2xl font-medium mb-2">Thank You!</h3>
+                  <h3 className="font-newsreader text-2xl font-medium mb-2">
+                    Thank You!
+                  </h3>
                   <p className="text-gray-600 mb-6">
-                    Your message has been successfully sent. We'll get back to you as soon as possible.
+                    Your message has been successfully sent. We'll get back to
+                    you as soon as possible.
                   </p>
-                  <Button 
-                    onClick={() => setIsSubmitted(false)} 
+                  <Button
+                    onClick={() => setIsSubmitted(false)}
                     variant="outline"
                   >
                     Send Another Message
@@ -81,7 +89,9 @@ const Contact = () => {
                 </div>
               ) : (
                 <>
-                  <h2 className="font-newsreader text-2xl font-medium mb-6">Send Us a Message</h2>
+                  <h2 className="font-newsreader text-2xl font-medium mb-6">
+                    Send Us a Message
+                  </h2>
                   <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                       <div className="space-y-2">
@@ -112,7 +122,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                       <div className="space-y-2">
                         <label htmlFor="phone" className="text-sm font-medium">
@@ -127,7 +137,10 @@ const Contact = () => {
                         />
                       </div>
                       <div className="space-y-2">
-                        <label htmlFor="subject" className="text-sm font-medium">
+                        <label
+                          htmlFor="subject"
+                          className="text-sm font-medium"
+                        >
                           Subject <span className="text-red-500">*</span>
                         </label>
                         <Input
@@ -140,7 +153,7 @@ const Contact = () => {
                         />
                       </div>
                     </div>
-                    
+
                     <div className="space-y-2 mb-6">
                       <label htmlFor="message" className="text-sm font-medium">
                         Message <span className="text-red-500">*</span>
@@ -155,10 +168,10 @@ const Contact = () => {
                         required
                       />
                     </div>
-                    
-                    <Button 
-                      type="submit" 
-                      className="w-full" 
+
+                    <Button
+                      type="submit"
+                      className="w-full"
                       disabled={isSubmitting}
                     >
                       {isSubmitting ? "Sending..." : "Send Message"}
@@ -167,11 +180,13 @@ const Contact = () => {
                 </>
               )}
             </div>
-            
+
             {/* Contact Information */}
             <div>
-              <h2 className="font-newsreader text-2xl font-medium mb-6 pt-6">Contact Information</h2>
-              
+              <h2 className="font-newsreader text-2xl font-medium mb-6 pt-6">
+                Contact Information
+              </h2>
+
               <div className="grid grid-cols-1 gap-6 mb-8">
                 <div className="flex items-start">
                   <div className="h-12 w-12 bg-pastel-blue rounded-full flex items-center justify-center mr-4 shrink-0">
@@ -179,12 +194,10 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-medium mb-1">Our Location</h3>
-                    <p className="text-gray-600">
-                      Ahmedabad, Gujarat, India
-                    </p>
+                    <p className="text-gray-600">Ahmedabad, Gujarat, India</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="h-12 w-12 bg-pastel-pink rounded-full flex items-center justify-center mr-4 shrink-0">
                     <Phone className="h-5 w-5 text-primary" />
@@ -192,12 +205,13 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Phone Number</h3>
                     <p className="text-gray-600">
-                      +91 8866207909<br />
+                      +91 8866207909
+                      <br />
                       Mon-Fri, 9am-6pm EST
                     </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="h-12 w-12 bg-pastel-green rounded-full flex items-center justify-center mr-4 shrink-0">
                     <Mail className="h-5 w-5 text-primary" />
@@ -205,13 +219,14 @@ const Contact = () => {
                   <div>
                     <h3 className="font-medium mb-1">Email Address</h3>
                     <p className="text-gray-600">
-                      contact@webstudio.com<br />
+                      contact@webstudio.com
+                      <br />
                       support@webstudio.com
                     </p>
                   </div>
                 </div>
               </div>
-              
+
               {/* <div className="bg-pastel-purple/10 rounded-lg p-6">
                 <h3 className="font-newsreader text-xl font-medium mb-3">Business Hours</h3>
                 <ul className="space-y-2">
@@ -238,23 +253,26 @@ const Contact = () => {
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center mb-12">
-            <h2 className="font-newsreader text-3xl font-semibold mb-4">Find Us</h2>
+            <h2 className="font-newsreader text-3xl font-semibold mb-4">
+              Find Us
+            </h2>
             <p className="text-gray-600">
               Visit our office to discuss your project in person.
             </p>
           </div>
-          
+
           <div className="aspect-video rounded-lg overflow-hidden shadow-sm">
-            {/* Placeholder for map - in a real application, you'd use Google Maps or similar */}
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.992533333333!2d72.5704926148723!3d23.02578328493482!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bdc9f%3A0x9a1f0d61e8440afe!2sGreen%20Park%20Society!5e0!3m2!1sen!2sin!4v1718614860083!5m2!1sen!2sin"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d235013.74842436166!2d72.41492565798286!3d23.020474104203796!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e848aba5bd449%3A0x4fcedd11614f6516!2sAhmedabad%2C%20Gujarat!5e0!3m2!1sen!2sin!4v1745836730252!5m2!1sen!2sin"
               width="100%"
               height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-            ></iframe>     
+              style={{border:0}}
+              loading="lazy"
+            ></iframe>
             <div className="w-full h-full bg-gray-200 flex items-center justify-center">
-              <p className="text-gray-500">Interactive Map Would Be Displayed Here</p>
+              <p className="text-gray-500">
+                Interactive Map Would Be Displayed Here
+              </p>
             </div>
           </div>
         </div>
